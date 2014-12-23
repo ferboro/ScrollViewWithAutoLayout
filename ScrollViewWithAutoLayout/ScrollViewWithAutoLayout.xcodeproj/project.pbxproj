@@ -13,6 +13,7 @@
 		D025D6541A36EA41004B7ABA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D025D6531A36EA41004B7ABA /* Images.xcassets */; };
 		D025D6571A36EA41004B7ABA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D025D6551A36EA41004B7ABA /* LaunchScreen.xib */; };
 		D025D6631A36EA41004B7ABA /* ScrollViewWithAutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025D6621A36EA41004B7ABA /* ScrollViewWithAutoLayoutTests.swift */; };
+		D02D2ACB1A4975EC00591462 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D2ACA1A4975EC00591462 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D025D65C1A36EA41004B7ABA /* ScrollViewWithAutoLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewWithAutoLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D025D6611A36EA41004B7ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D025D6621A36EA41004B7ABA /* ScrollViewWithAutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithAutoLayoutTests.swift; sourceTree = "<group>"; };
+		D02D2ACA1A4975EC00591462 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D025D6531A36EA41004B7ABA /* Images.xcassets */,
 				D025D6551A36EA41004B7ABA /* LaunchScreen.xib */,
 				D025D64A1A36EA41004B7ABA /* Supporting Files */,
+				D02D2ACA1A4975EC00591462 /* DetailViewController.swift */,
 			);
 			path = ScrollViewWithAutoLayout;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02D2ACB1A4975EC00591462 /* DetailViewController.swift in Sources */,
 				D025D64F1A36EA41004B7ABA /* ViewController.swift in Sources */,
 				D025D64D1A36EA41004B7ABA /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +411,7 @@
 				D025D6681A36EA41004B7ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D025D6691A36EA41004B7ABA /* Build configuration list for PBXNativeTarget "ScrollViewWithAutoLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				D025D66B1A36EA41004B7ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
