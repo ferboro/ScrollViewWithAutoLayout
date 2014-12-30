@@ -167,7 +167,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-Fo-pdz">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-Fo-pdz">
                                 <rect key="frame" x="290" y="390" width="20" height="20"/>
                                 <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -257,6 +257,7 @@
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="activityIndicator" destination="8dZ-Fo-pdz" id="1Gs-WZ-uOh"/>
                         <outlet property="imageView" destination="VRF-sk-tlO" id="Sf3-y4-2x4"/>
                     </connections>
                 </viewController>

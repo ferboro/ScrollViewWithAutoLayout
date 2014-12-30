@@ -10,15 +10,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-      if let img = loadImage("http://lorempixel.com/400/400/cats/") as UIImage? {
-        imageView.image = img
-      }
+        //loadImage("http://lorempixel.com/400/400/cats/")
+        loadImageWithCompletion("http://lorempixel.com/400/400/cats/", completionHandler: { (imageData) -> () in
+          self.imageView.image = UIImage(data: imageData)
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,14 +29,31 @@ class DetailViewController: UIViewController {
     }
     
 
-    func loadImage(urlString:NSString) -> UIImage? {
+    func loadImage(urlString:NSString) {
       let loadURL = NSURL(string: urlString)
-      if let image = UIImage(data: NSData(contentsOfURL: loadURL!)!) {
-        return image
-      }
-      return nil
+      var image: UIImage?
+      var request: NSURLRequest = NSURLRequest(URL: loadURL!)
+      
+      NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+        image = UIImage(data: data)
+        self.imageView.image = image
+        self.activityIndicator.stopAnimating()
+      })
     }
   
+    func loadImageWithCompletion(urlString:NSString, completionHandler: (NSData) -> ()) {
+      let loadURL = NSURL(string: urlString)
+      var image: UIImage?
+      var request: NSURLRequest = NSURLRequest(URL: loadURL!)
+      
+      NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+        self.activityIndicator.stopAnimating()
+        if ((error) != nil) {
+          return
+        }
+        completionHandler(data)
+      })
+    }
   /*
     // MARK: - Navigation
 
