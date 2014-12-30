@@ -1,4 +1,4 @@
 ScrollViewWithAutoLayout
 ========================
 
-How to use ScrollView with AutoLayout in xCode 6
+How to use ScrollView with AutoLayout and Size Classes in xCode 6.
